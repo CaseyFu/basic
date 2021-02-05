@@ -1,4 +1,4 @@
-package org.casey.basic.compare;
+package org.casey.basic.common;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

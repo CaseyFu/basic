@@ -1,7 +1,7 @@
-package org.casey.basic.compare;
+package org.casey.basic;
 
+import org.casey.basic.common.UserComparator;
 import org.junit.Test;
-import org.mapstruct.ap.shaded.freemarker.template.utility.CollectionUtils;
 
 import java.time.LocalDateTime;
 import java.util.*;
