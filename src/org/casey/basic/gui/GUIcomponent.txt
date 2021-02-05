@@ -1,0 +1,12 @@
+标签JLabel
+按钮JButton
+复选框JCheckBox
+单选框JRadioButton
+按钮组ButtonGroup
+下拉框JComboBox
+对话框JOptionPane
+文本框JTextField
+密码框JPasswordField
+文本域JTextArea
+进度条JProgressBar
+文件选择器JFileChooser

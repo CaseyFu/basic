@@ -1,0 +1,7 @@
+1.初始化驱动:Class.forName("com.mysql.jdbc.Driver");
+2.连接数据库,并选择使用哪个数据库
+2.利用DriverManager类,创建Connection对象
+3.创建Statement对象
+4.准备sql语句
+5.执行sql语句
+6.关闭数据库,先关闭Statement对象,再关闭Connection对象

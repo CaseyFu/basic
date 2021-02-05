@@ -1,0 +1,64 @@
+
+//生成线程的3种方法
+//1.继承Thread类
+//2.类实现Runnable接口
+//3.匿名类
+package ThreadTest;
+class Thread_generate1{
+	
+	//匿名类方法
+	public void exe() {
+		Thread t = new Thread() {
+			public void run() {
+				for(int i=0; i<10; i++) {
+					try {
+						Thread.sleep(1000);
+					}catch(Exception e) {
+						e.printStackTrace();
+					}
+					System.out.println("这里是匿名类方法入口"+i);
+				}
+			}
+		};
+		t.start();
+	}
+	
+}
+class Thread_generate0 implements Runnable {
+	
+	//实现Runnable接口
+	public void run() {
+		for(int i=0; i<10; i++) {
+			try {
+				Thread.sleep(1000);
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
+			System.out.println("这里是实现Runnable接口入口");
+		}
+	}
+}
+public class Thread_generate extends Thread{
+	public static void main(String []args) {
+		
+		
+		Thread t = new Thread(new Thread_generate());
+		Thread t0 = new Thread(new Thread_generate0());
+		t.start();	//继承Thread类
+		t0.start();	//实现Runnable接口
+		new Thread_generate1().exe();	//使用Thread匿名类
+		
+	}
+	
+	//继承Thread类
+	public void run() {
+		for(int i=0; i<10; i++) {
+			try {
+				Thread.sleep(700);
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
+			System.out.println("这里是run方法入口"+i);
+		}
+	}
+}
